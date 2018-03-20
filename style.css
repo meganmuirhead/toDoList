@@ -25,6 +25,30 @@ body {
   background-color: #f4f8f9;
   border-radius: 4px;
 }
+.container .row {
+  width: 80%;
+  border: 1px solid #dadfea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  position: relative;
+}
+.container .rowLeft {
+  display: flex;
+}
+.container .iconspot {
+  margin-right: 10px;
+  width: 16px;
+}
+.container .complete {
+  color: green;
+  border-color: green;
+}
+.container .fa-trash {
+  cursor: pointer;
+  margin-left: 8px;
+}
 .container .headbar {
   display: flex;
   justify-content: space-between;

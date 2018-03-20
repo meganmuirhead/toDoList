@@ -1,43 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="action.js" defer></script>
-</head>
-<body>
-<div class="container">
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+})
 
-    <div class="headbar">
-    <div class="left">
-    Megan Muirhead
-</div>
-<div class="right">
-    right side for now
-                   </div>
-                   </div>
-                   <div class="main">
-    <div class="header">
-    <div class="headLeft">
-    To do list
-</div>
-<div class="headerRight">
-    <a href="#" class="blueBtn">Add List</a>
-<a href="#" class="blueBtn">Add Item</a>
-<a href="#" class="blueBtn">Clear Complete Tasks</a>
+function markComplete(myelement) {
+    let mydad = $(myelement).parent().parent();
+    $(mydad).toggleClass("complete");
+    $(mydad).find(".iconspot").toggleClass("fa-check");
 
-</div>
-</div>
-<div class="list">
-    <div class="toDoList">
-    <span class="listLabel">List label</span>
-</div>
-</div>
-</div>
 
-</div>
 
-</body>
-</html>
+}
+function removeRow(theelement) {
+    let grandpa = $(theelement).parent().parent();
+
+    // $(grandpa).animate({
+    //     opacity: 0,
+    //     left: "+=50"
+    // },
+    //     800, function (){
+    //     //animation complete
+        $(grandpa).remove();
+
+    // });
+}
+// function removeRow(theelement) {
+//     let grandpa = $(theelement).parent().parent();\
+//
+//     $(grandpa).slideUp("900", function () {
+//         //fires after slide up is done
+//         $(grandpa).remove();
+//     });
+// }
+
+function validateForm() {var message = document.forms["myForm"]["myMessage"].value;if (message == null || message.trim().length < minLength) {  alert("Message must be filled out");returnfalse;    }}
+
+function checkInp() {
+    var x=document.forms["myForm"]["age"].value;
+    if (isNaN(x)) {
+        alert("Must input numbers");
+        return false;
+    }
+}
