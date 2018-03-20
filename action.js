@@ -13,15 +13,15 @@ function markComplete(myelement) {
 function removeRow(theelement) {
     let grandpa = $(theelement).parent().parent();
 
-    // $(grandpa).animate({
-    //     opacity: 0,
-    //     left: "+=50"
-    // },
-    //     800, function (){
-    //     //animation complete
+    $(grandpa).animate({
+        opacity: 0,
+        left: "+=50"
+    },
+        800, function (){
+        //animation complete
         $(grandpa).remove();
 
-    // });
+    });
 }
 // function removeRow(theelement) {
 //     let grandpa = $(theelement).parent().parent();\
