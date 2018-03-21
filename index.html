@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="action.js" defer></script>
 </head>
-<body>
+<body   >
     <div class="container">
 
         <div class="headbar">
@@ -21,93 +21,32 @@
                 Megan Muirhead
             </div>
             <div class="right">
-                right side for now
+                Super Sweet Todo List
             </div>
         </div>
-        <div class="main">
-            <div class="header">
-                <div class="headLeft">
-                    To do list
-                </div>
-                <div class="headerRight">
-                    <a href="#" class="blueBtn">Add List</a>
+        <!--<div class="main">-->
 
+            <div id="myDIV" class="header">
+                <h2>My To Do List</h2>
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Launch demo modal
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-                    <a href="#" class="blueBtn">Clear Complete Tasks</a>
-
-                </div>
+                    <input type="text" id="myInput" placeholder="Title...">
+                    <span onclick="newElement()" class="addBtn">Add</span>
             </div>
-            <div class="list">
-                <div class="toDoList">
-                   <span class="listLabel"><input type="text">List label</span>
-                </div>
+        <div id="myDIV2" class="header">
+
+        <h3>Category for </h3>
+
+                    <input type="text" id="myNewItem" placeholder="Add New Category">
+                    <span onclick="newCategory()" class="addBtn">Add</span>
+
             </div>
+            <ul id="myUL">
+                <li>Hit the gym</li>
+                <li class="checked">Pay bills</li>
+            </ul>
         </div>
 
 
-
-
-        <div class="row">
-            <div class="rowLeft">
-                <div class="iconspot fa"></div>
-                <div class="label">workout</div>
-            </div>
-            <div class="rowRight">
-                <button onclick="markComplete(this)">Complete</button>
-                <div class="fa fa-trash" onclick="removeRow(this)"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="rowLeft">
-                <div class="iconspot fa"></div>
-                <div class="label">trash</div>
-            </div>
-            <div class="rowRight">
-                <button onclick="markComplete(this)">Complete</button>
-                <div class="fa fa-trash" onclick="removeRow(this)"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="rowLeft">
-                <div class="iconspot fa"></div>
-                <div class="label">yf</div>
-            </div>
-            <div class="rowRight">
-                <button onclick="markComplete(this)">Complete</button>
-                <div class="fa fa-trash" onclick="removeRow(this)"></div>
-            </div>
-        </div>
-
-    </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
