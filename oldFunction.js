@@ -23,6 +23,15 @@ function removeRow(theelement) {
 
         });
 }
+var addItemToPage = function(itemData) {
+    var item = itemTemplate.clone()
+    item.attr('data-id',itemData.id)
+    item.find('.description').text(itemData.description)
+    if(itemData.completed) {
+        item.addClass('completed')
+    }
+    list.append(item)
+}
 // function removeRow(theelement) {
 //     let grandpa = $(theelement).parent().parent();\
 //

@@ -34,7 +34,7 @@
             </div>
         <div id="myDIV2" class="header">
 
-        <h3>Category for </h3>
+        <h3>Category for: </h3>
 
                     <input type="text" id="myNewItem" placeholder="Add New Category">
                     <span onclick="newCategory()" class="addBtn">Add</span>
@@ -43,6 +43,16 @@
             <ul id="myUL">
                 <li>Hit the gym</li>
                 <li class="checked">Pay bills</li>
+                <div class="row">
+                    <div class="rowLeft">
+                        <div class="iconspot fa"></div>
+                        <div class="label">yf</div>
+                    </div>
+                    <div class="rowRight">
+                        <button onclick="markComplete(this)">Complete</button>
+                        <div class="fa fa-trash" onclick="removeRow(this)"></div>
+                    </div>
+                </div>
             </ul>
         </div>
 
