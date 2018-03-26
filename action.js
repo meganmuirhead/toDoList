@@ -3,46 +3,45 @@
 //     $('#myInput').trigger('focus')
 // })
 
-function validateForm() {var message = document.forms["myForm"]["myMessage"].value;if (message == null || message.trim().length < minLength) {  alert("Message must be filled out");returnfalse;    }}
+// function validateForm() {var message = document.forms["myForm"]["myMessage"].value;if (message == null || message.trim().length < minLength) {  alert("Message must be filled out");returnfalse;    }}
+//
+// function checkInp() {
+//     var x=document.forms["myForm"]["age"].value;
+//     if (isNaN(x)) {
+//         alert("Must input numbers");
+//         return false;
+//     }
+// }
 
-function checkInp() {
-    var x=document.forms["myForm"]["age"].value;
-    if (isNaN(x)) {
-        alert("Must input numbers");
-        return false;
-    }
-}
 
+// // Create a "close" button and append it to each list item
+// var myNodelist = document.getElementsByTagName("LI");
+// var i;
+// for (i = 0; i < myNodelist.length; i++) {
+//     var span = document.createElement("SPAN");
+//     var txt = document.createTextNode("\u00D7");
+//     span.className = "close";
+//     span.appendChild(txt);
+//     myNodelist[i].appendChild(span);
+// }
 
+// // Click on a close button to hide the current list item
+// var close = document.getElementsByClassName("close");
+// var i;
+// for (i = 0; i < close.length; i++) {
+//     close[i].onclick = function() {
+//         var div = this.parentElement;
+//         div.style.display = "none";
+//     }
+// }
 
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
-    }
-}, false);
+// // Add a "checked" symbol when clicking on a list item
+// var list = document.querySelector('ul');
+// list.addEventListener('click', function(ev) {
+//     if (ev.target.tagName === 'LI') {
+//         ev.target.classList.toggle('checked');
+//     }
+// }, false);
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
@@ -73,7 +72,7 @@ function newElement() {
 // mark compete and remove
 
 function markComplete(myelement) {
-    let mydad = $(myelement).parent().parent();
+    let mydad = $(myelement).parent();
     $(mydad).toggleClass("complete");
     $(mydad).find(".iconspot").toggleClass("fa-check");
 
@@ -81,7 +80,7 @@ function markComplete(myelement) {
 
 }
 function removeRow(theelement) {
-    let grandpa = $(theelement).parent().parent();
+    let grandpa = $(theelement).parent();
 
     $(grandpa).animate({
             opacity: 0,
