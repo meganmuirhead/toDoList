@@ -44,7 +44,7 @@
 // }, false);
 
 // Create a new list item when clicking on the "Add" button
-function newElement() {
+function newCategory() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
     var t = document.createTextNode(inputValue);
@@ -95,7 +95,7 @@ function removeRow(theelement) {
 
 // Create an item on the todo list
 
-function newCategory() {
+function newTodo() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myNewItem").value;
     var t = document.createTextNode(inputValue);

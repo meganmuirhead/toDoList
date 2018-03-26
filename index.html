@@ -27,86 +27,35 @@
     </div>
     <div id="myDIV" class="header">
         <input type="text" id="myInput" placeholder="Add New Category...">
-        <div onclick="newElement()" class="addBtn">Add category</div>
+        <div onclick="newCategory()" class="addBtn">Add category</div>
     </div>
 
     <div class="mainAddBox">
         <div id="myDIV2" class="header">
-
-            <h3>12pm
-                <button> edit</button>
-            </h3>
-
-            <input type="text" placeholder="Title...">
-            <span onclick="newCategory()" class="addBtn">Add ToDo Item</span>
-
+            <div>
+                <h3>12pm<button> edit</button></h3>
+                <input type="text" placeholder="Title...">
+                <span onclick="newTodo()" class="addBtn">Add ToDo Item</span>
+            </div>
+            <div>
+                <ul id="myUL">
+                    <li>12 pm list todo
+                        <div class="fa fa-trash" onclick="removeRow(this)"></div>
+                        <div class="iconspot fa"></div>
+                        <button onclick="markComplete(this)">Complete</button>
+                        <button onclick="edit(this)"> Edit</button>
+                    </li>
+                    <li class="checked">Pay bills
+                        <div class="fa fa-trash" onclick="removeRow(this)"></div>
+                        <div class="iconspot fa"></div>
+                        <button onclick="markComplete(this)">Complete</button>
+                        <button onclick="edit(this)"> Edit</button>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul id="myUL">
-        <li>12 pm list todo
-            <div class="fa fa-trash" onclick="removeRow(this)"></div>
-            <div class="iconspot fa"></div>
-            <button onclick="markComplete(this)">Complete</button>
-            <button onclick="edit(this)"> Edit</button>
-        </li>
-        <li class="checked">Pay bills
-            <div class="fa fa-trash" onclick="removeRow(this)"></div>
-            <div class="iconspot fa"></div>
-            <button onclick="markComplete(this)">Complete</button>
-            <button onclick="edit(this)"> Edit</button>
-        </li>
-        <!--<div class="row">-->
-            <!--<div class="rowLeft">-->
-                <!--<div class="iconspot fa"></div>-->
-                <!--<div class="label">cool</div>-->
-            <!--</div>-->
-            <!--<div class="rowMiddle">-->
-                <!--<button onclick="#">edit</button>-->
-
-            <!--</div>-->
-            <!--<div class="rowRight">-->
-                <!--<button onclick="markComplete(this)">Complete</button>-->
-                <!--<div class="fa fa-trash" onclick="removeRow(this)"></div>-->
-            <!--</div>-->
-
-        <!--</div>-->
-        </ul>
-    </div>
-    <div id="myDIV3" class="header">
-
-        <h3>Tomorrow
-            <button> edit</button>
-        </h3>
-
-        <input type="text" placeholder="Title...">
-        <span onclick="newCategory()" class="">Add ToDo Item</span>
-
-    </div>
-    <!--<ul id="myUL">-->
-    <!--<li>Hit the gym-->
-    <!--<button> edit</button>-->
-    <!--</li>-->
-    <!--<li class="checked">Pay bills-->
-    <!--<button> edit</button>-->
-    <!--</li>-->
-    <div class="row">
-        <ul class="rowLeft" id="myUL2">
-            <li class="iconspot fa"></li>
-            <li class="label">yf</li>
-        </ul>
-        <div class="rowMiddle">
-            <button onclick=" ">edit</button>
-
-        </div>
-        <div class="rowRight">
-            <button onclick="markComplete(this)">Complete</button>
-            <div class="fa fa-trash" onclick="removeRow(this)"></div>
-        </div>
-
     </div>
 </div>
-</div>
-</div>
-
 
 
 
