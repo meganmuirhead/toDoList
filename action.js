@@ -25,24 +25,32 @@ function newCategory() {
    CDiv.append(myItem);
    var CDivspan = document.createElement("span");
    $(CDivspan).addClass("addBtn");
-   $(CDivspan).attr("onclick", "newTodo()");
+   $(CDivspan).attr("onclick", "newTodo(this)");
    CDiv.append(CDivspan);
    $(CDivspan).text("Add Todo Item");
+   var DDDiv = document.createElement("div");
+   var myDDDivUl = document.createElement("ul");
+
+   Bdiv.append(DDDiv);
+   DDDiv.append(myDDDivUl);
 
 }
+
+
 // mark compete and remove
 
 
-function markComplete(myelement) {
-    let mydad = $(myelement).parent();
+function markComplete(myElement) {
+    let mydad = $(myElement).parent();
     $(mydad).toggleClass("complete");
     $(mydad).find(".iconspot").toggleClass("fa-check");
 
 
 
 }
-function removeRow(theelement) {
-    let grandpa = $(theelement).parent();
+// remove aspect
+function removeRow(theElement) {
+    let grandpa = $(theElement).parent();
 
     $(grandpa).animate({
             opacity: 0,
@@ -57,8 +65,9 @@ function removeRow(theelement) {
 
 // Create an item on the todo list
 
-function newTodo() {
+function newTodo(buttonElement) {
     var li = document.createElement("li");
+    var CDiv = buttonElement.parent();
     var inputValue = document.getElementById("myNewItem").value;
     var t = document.createTextNode(inputValue);
     li.appendChild(t);

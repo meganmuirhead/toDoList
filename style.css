@@ -90,6 +90,9 @@ input {
 .addBtn:hover {
   background-color: 87CEFA;
 }
+.fa-trash {
+  background-color: FF0000;
+}
 .container {
   width: 80%;
   height: 90%;
