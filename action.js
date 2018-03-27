@@ -1,75 +1,37 @@
-// code for Modal
-// $('#myModal').on('shown.bs.modal', function () {
-//     $('#myInput').trigger('focus')
-// })
-
-// function validateForm() {var message = document.forms["myForm"]["myMessage"].value;if (message == null || message.trim().length < minLength) {  alert("Message must be filled out");returnfalse;    }}
-//
-// function checkInp() {
-//     var x=document.forms["myForm"]["age"].value;
-//     if (isNaN(x)) {
-//         alert("Must input numbers");
-//         return false;
-//     }
-// }
-
-
-// // Create a "close" button and append it to each list item
-// var myNodelist = document.getElementsByTagName("LI");
-// var i;
-// for (i = 0; i < myNodelist.length; i++) {
-//     var span = document.createElement("SPAN");
-//     var txt = document.createTextNode("\u00D7");
-//     span.className = "close";
-//     span.appendChild(txt);
-//     myNodelist[i].appendChild(span);
-// }
-
-// // Click on a close button to hide the current list item
-// var close = document.getElementsByClassName("close");
-// var i;
-// for (i = 0; i < close.length; i++) {
-//     close[i].onclick = function() {
-//         var div = this.parentElement;
-//         div.style.display = "none";
-//     }
-// }
-
-// // Add a "checked" symbol when clicking on a list item
-// var list = document.querySelector('ul');
-// list.addEventListener('click', function(ev) {
-//     if (ev.target.tagName === 'LI') {
-//         ev.target.classList.toggle('checked');
-//     }
-// }, false);
 
 // Create a new list item when clicking on the "Add" button
 function newCategory() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-        alert("You must write something!");
-    } else {
-        document.getElementById("myUL").appendChild(li);
-    }
-    document.getElementById("myInput").value = "";
+    // creating new <div></div>
+   var Bdiv = document.createElement("div");
+   // <div>a new b</div>
+   // $(Bdiv).text("A New B");
 
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
+   var ADiv = document.getElementById("ADiv");
 
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
+   ADiv.prepend(Bdiv);
+   $(Bdiv).addClass("header");
+
+   var CDiv = document.createElement("div");
+   var h3 = document.createElement("h3");
+   var inputValue = document.getElementById("myInput").value;
+   var butt = document.createElement("button");
+   $(h3).text(inputValue);
+   $(butt).text("Edit");
+   h3.append(butt);
+   CDiv.append(h3);
+   Bdiv.append(CDiv);
+   var myItem = document.createElement("input");
+   $(myItem).attr("placeholder", "Add item");
+   CDiv.append(myItem);
+   var CDivspan = document.createElement("span");
+   $(CDivspan).addClass("addBtn");
+   $(CDivspan).attr("onclick", "newTodo()");
+   CDiv.append(CDivspan);
+   $(CDivspan).text("Add Todo Item");
+
 }
 // mark compete and remove
+
 
 function markComplete(myelement) {
     let mydad = $(myelement).parent();

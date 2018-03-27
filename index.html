@@ -15,6 +15,7 @@
     <script src="action.js" defer></script>
 </head>
 <body>
+
 <div class="container">
 
     <div class="headbar">
@@ -30,11 +31,12 @@
         <div onclick="newCategory()" class="addBtn">Add category</div>
     </div>
 
-    <div class="mainAddBox">
+    <div class="mainAddBox" id="ADiv">
+
         <div id="myDIV2" class="header">
             <div>
-                <h3>12pm<button> edit</button></h3>
-                <input type="text" placeholder="Title...">
+                <h3>12pm<button> Edit</button></h3>
+                <input type="text" placeholder="Add Item">
                 <span onclick="newTodo()" class="addBtn">Add ToDo Item</span>
             </div>
             <div>
