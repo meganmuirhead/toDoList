@@ -68,6 +68,11 @@ function removeRow(theElement) {
 function newTodo(buttonElement) {
     var li = document.createElement("li");
     var CDiv = buttonElement.parent();
+    CDiv.find("input.Cdiv");
+
+    var inputPlaceholder = CDiv.find("input.Cdiv");
+
+
     var inputValue = document.getElementById("myNewItem").value;
     var t = document.createTextNode(inputValue);
     li.appendChild(t);

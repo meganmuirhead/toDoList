@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a88e03-91ea-40f2-a10a-6e573a508da4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/action.js" afterPath="$PROJECT_DIR$/action.js" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change beforePath="$PROJECT_DIR$/style.less" afterPath="$PROJECT_DIR$/style.less" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,14 +17,14 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.51891077">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.6569343">
+        <splitter split-orientation="horizontal" split-proportion="0.8552632">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/index.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="138">
-                      <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+                    <state relative-caret-position="244">
+                      <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="22" />
                       <folding />
                     </state>
                   </provider>
@@ -67,8 +63,18 @@
           <file leaf-file-name="action.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/action.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="201">
-                  <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+                <state relative-caret-position="417">
+                  <caret line="89" column="6" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="scratch.js" pinned="false" current-in-tab="false">
+            <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -124,9 +130,10 @@
         <option value="$PROJECT_DIR$/modal.html" />
         <option value="$PROJECT_DIR$/oldFunction.js" />
         <option value="$PROJECT_DIR$/whatWeMadeInClass.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style.less" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/action.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" />
       </list>
     </option>
   </component>
@@ -200,6 +207,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="javascript.nodejs.core.library.configured.version" value="9.5.0" />
     <property name="jsx.switch.disabled" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JavaScript" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -237,12 +245,12 @@
       <workItem from="1521954485081" duration="7149000" />
       <workItem from="1522028313510" duration="4318000" />
       <workItem from="1522073421893" duration="338000" />
-      <workItem from="1522073957610" duration="11030000" />
+      <workItem from="1522073957610" duration="14133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44103000" />
+    <option name="totallyTimeSpent" value="47206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="11" y="76" width="1429" height="738" extended-state="0" />
@@ -608,16 +616,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="244">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/action.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="417">
+          <caret line="89" column="6" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="6" />
           <folding />
         </state>
       </provider>
