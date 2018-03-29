@@ -64,13 +64,11 @@ function removeRow(theElement) {
 }
 
 // Create an item on the todo list
-
 function newTodo(buttonElement) {
     var li = document.createElement("li");
     var CDiv = buttonElement.parent();
-    CDiv.find("input.Cdiv");
 
-    var inputPlaceholder = CDiv.find("input.Cdiv");
+    var inputPlaceholder = $(CDiv).find("input.CDiv");
 
 
     var inputValue = document.getElementById("myNewItem").value;
