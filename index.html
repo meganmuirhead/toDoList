@@ -35,12 +35,13 @@
 
         <div class="header">
             <div>
-                <h3>12pm<button> Edit</button></h3>
-                <input type="text" class="inputCdiv" placeholder="Add Item">
+                <!--<h3 contenteditable="true">12pm</h3>-->
+                <h3>12pm<button contenteditable="true"> Edit</button></h3>
+                <input type="text" class="inputCDiv" placeholder="Add Item">
                 <button onclick="newTodo(this)" class="addBtn">Add ToDo Item</button>
             </div>
             <div>
-                <ul id="myUL">
+                <ul>
                     <li>12 pm list todo
                         <div class="fa fa-trash" onclick="removeRow(this)"></div>
                         <div class="iconspot fa"></div>
