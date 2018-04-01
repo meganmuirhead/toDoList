@@ -71,11 +71,14 @@ function newTodo(buttonElement) {
     var li = document.createElement("li");
     var CDiv = $(buttonElement).parent();
 
+    var DDDivSpan = document.createElement("span");
+
     var input = $(CDiv).find("input.inputCDiv");
     var inputPlaceholder = input[0].value;
     var t = document.createTextNode(inputPlaceholder);
+    DDDivSpan.append(t);
+    li.append(DDDivSpan);
 
-    li.append(t);
     var trashDiv = document.createElement("div");
     li.append(trashDiv);
     $(trashDiv).addClass("fa");
@@ -98,7 +101,7 @@ function newTodo(buttonElement) {
     li.append(buttz2);
     var buttz2Text = document.createTextNode("Edit");
     buttz2.append(buttz2Text);
-    $(buttz).attr("onclick", "edit(this)");
+    $(buttz2).attr("onclick", "edit(this)");
 
     var BDiv = $(CDiv).parent();
     var returnUl = $(BDiv).find("ul");
@@ -107,7 +110,24 @@ function newTodo(buttonElement) {
 
 }
 
+// var CDiv = $(buttonElement).parent();
+//     var input = $(CDiv).find("input.inputCDiv");
 
+
+function edit(editButton) {
+    var buttonParent = $(editButton).parent();
+    var DDDivSpanArray = $(buttonParent).find("span");
+    var DDDivSpan = DDDivSpanArray[0];
+    var spanText = DDDivSpan.innerText;
+
+    var inputField = document.createElement("input");
+
+    inputField.value = spanText;
+
+    DDDivSpan.innerHTML = '';
+    $(DDDivSpan).append(inputField);
+
+}
 
 
 
