@@ -8,7 +8,7 @@ function newCategory() {
     var ADiv = document.getElementById("ADiv");
 
     ADiv.prepend(Bdiv);
-    $(Bdiv).addClass("header");
+    //$(Bdiv).addClass("header");
 
     var CDiv = document.createElement("div");
     var h3 = document.createElement("h3");
@@ -76,7 +76,7 @@ function newTodo(buttonElement) {
 
     var input = $(CDiv).find("input.inputCDiv");
     var inputPlaceholder = input[0].value;
-    //input[0].value = '';
+    input[0].value = '';
     if (inputPlaceholder === '') {
         alert("You must write something!");
         return;

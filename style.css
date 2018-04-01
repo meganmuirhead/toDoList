@@ -50,17 +50,11 @@ ul {
 /* Style the list items */
 ul li {
   cursor: pointer;
-  position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
   font-size: 18px;
   transition: 0.2s;
-  /* make the list items unselectable */
 }
-/* Darker background-color on hover */
-/* When clicked on, add a background color and strike out text */
-/* Add a "checked" mark when clicked on */
-/* Style the close button */
 /* Clear floats after the header */
 .header:after {
   content: "";
