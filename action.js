@@ -1,39 +1,40 @@
-
 // Create a new list item when clicking on the "Add" button
 function newCategory() {
     // creating new <div></div>
-   var Bdiv = document.createElement("div");
-   // <div>a new b</div>
-   // $(Bdiv).text("A New B");
+    var Bdiv = document.createElement("div");
+    // <div>a new b</div>
+    // $(Bdiv).text("A New B");
 
-   var ADiv = document.getElementById("ADiv");
+    var ADiv = document.getElementById("ADiv");
 
-   ADiv.prepend(Bdiv);
-   $(Bdiv).addClass("header");
+    ADiv.prepend(Bdiv);
+    $(Bdiv).addClass("header");
 
-   var CDiv = document.createElement("div");
-   var h3 = document.createElement("h3");
-   var inputValue = document.getElementById("myInput").value;
-   var butt = document.createElement("button");
-   $(h3).text(inputValue);
-   $(butt).text("Edit");
-   h3.append(butt);
-   CDiv.append(h3);
-   Bdiv.append(CDiv);
-   var myItem = document.createElement("input");
-   $(myItem).addClass("inputCDiv");
-   $(myItem).attr("placeholder", "Add item");
-   CDiv.append(myItem);
-   var CDivspan = document.createElement("button");
-   $(CDivspan).addClass("addBtn");
-   $(CDivspan).attr("onclick", "newTodo(this)");
-   CDiv.append(CDivspan);
-   $(CDivspan).text("Add Todo Item");
-   var DDDiv = document.createElement("div");
-   var myDDDivUl = document.createElement("ul");
+    var CDiv = document.createElement("div");
+    var h3 = document.createElement("h3");
+    var inputElement = document.getElementById("myInput");
+    var inputValue = inputElement.value;
+    inputElement.value = '';
+    var butt = document.createElement("button");
+    $(h3).text(inputValue);
+    $(butt).text("Edit");
+    h3.append(butt);
+    CDiv.append(h3);
+    Bdiv.append(CDiv);
+    var myItem = document.createElement("input");
+    $(myItem).addClass("inputCDiv");
+    $(myItem).attr("placeholder", "Add item");
+    CDiv.append(myItem);
+    var CDivButton = document.createElement("button");
+    $(CDivButton).addClass("addBtn");
+    $(CDivButton).attr("onclick", "newTodo(this)");
+    CDiv.append(CDivButton);
+    $(CDivButton).text("Add Todo Item");
+    var DDDiv = document.createElement("div");
+    var myDDDivUl = document.createElement("ul");
 
-   Bdiv.append(DDDiv);
-   DDDiv.append(myDDDivUl);
+    Bdiv.append(DDDiv);
+    DDDiv.append(myDDDivUl);
 
 
 }
@@ -48,8 +49,8 @@ function markComplete(myElement) {
     $(mydad).find(".iconspot").toggleClass("fa-check");
 
 
-
 }
+
 // remove aspect
 function removeRow(theElement) {
     let grandpa = $(theElement).parent();
@@ -58,7 +59,7 @@ function removeRow(theElement) {
             opacity: 0,
             left: "+=50"
         },
-        800, function (){
+        800, function () {
             //animation complete
             $(grandpa).remove();
 
@@ -75,9 +76,17 @@ function newTodo(buttonElement) {
 
     var input = $(CDiv).find("input.inputCDiv");
     var inputPlaceholder = input[0].value;
+    //input[0].value = '';
+    if (inputPlaceholder === '') {
+        alert("You must write something!");
+        return;
+    }
     var t = document.createTextNode(inputPlaceholder);
     DDDivSpan.append(t);
+
+
     li.append(DDDivSpan);
+
 
     var trashDiv = document.createElement("div");
     li.append(trashDiv);
@@ -110,9 +119,20 @@ function newTodo(buttonElement) {
 
 }
 
+function saveTodoEdit(inputField) {
+    var spanDiv = $(inputField).parent();
+    var newValue = inputField.value;
+    $(spanDiv).empty();
+    $(spanDiv).append(newValue);
+}
+
 // var CDiv = $(buttonElement).parent();
 //     var input = $(CDiv).find("input.inputCDiv");
-
+function pressedEnterOnEditFeild(event) {
+    if (event.keyCode == 13) {
+        saveTodoEdit(event.currentTarget);
+    }
+}
 
 function edit(editButton) {
     var buttonParent = $(editButton).parent();
@@ -127,31 +147,27 @@ function edit(editButton) {
     DDDivSpan.innerHTML = '';
     $(DDDivSpan).append(inputField);
 
+    inputField.addEventListener("keypress", pressedEnterOnEditFeild);
 }
 
 
+//
 
-
-
-
-
-    //
-    // if (inputValue === '') {
-    //     alert("You must write something!");
-    // } else {
-    //     document.getElementById("myUL").appendChild(li);
-    // }
-    // document.getElementById("myNewItem").value = "";
-    //
-    // var span = document.createElement("SPAN");
-    // var txt = document.createTextNode("\u00D7");
-    // span.className = "close";
-    // span.appendChild(txt);
-    // li.appendChild(span);
-    //
-    // for (i = 0; i < close.length; i++) {
-    //     close[i].onclick = function() {
-    //         var div = this.parentElement;
-    //         div.style.display = "none";
-    //     }
-    // }
+// document.getElementById("myNewItem").value = "";
+//     // if (inputValue === '') {
+// if alert("You must write something!");
+// } else {
+//     document.getElementById("myUL").appendChild(li);
+// }
+// var span = document.createElement("SPAN");
+// var txt = document.createTextNode("\u00D7");
+// span.className = "close";
+// span.appendChild(txt);
+// li.appendChild(span);
+//
+// for (i = 0; i < close.length; i++) {
+//     close[i].onclick = function() {
+//         var div = this.parentElement;
+//         div.style.display = "none";
+//     }
+// }
