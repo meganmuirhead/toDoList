@@ -1,5 +1,6 @@
 // Create a new list item when clicking on the "Add" button
 function newCategory() {
+
     // creating new <div></div>
     var Bdiv = document.createElement("div");
     // <div>a new b</div>
@@ -10,12 +11,21 @@ function newCategory() {
     ADiv.prepend(Bdiv);
     //$(Bdiv).addClass("header");
 
+
+
     var CDiv = document.createElement("div");
     var h3 = document.createElement("h3");
     var inputElement = document.getElementById("myInput");
     var inputValue = inputElement.value;
     inputElement.value = '';
+    if (inputValue === '') {
+        alert("You must write something!");
+        return;
+    }
     var butt = document.createElement("button");
+    $('button').click(function(){
+        $(butt).attr('contenteditable','true');
+    });
     $(h3).text(inputValue);
     $(butt).text("Edit");
     h3.append(butt);
@@ -69,6 +79,7 @@ function removeRow(theElement) {
 
 // Create an item on the todo list
 function newTodo(buttonElement) {
+
     var li = document.createElement("li");
     var CDiv = $(buttonElement).parent();
 
@@ -83,6 +94,8 @@ function newTodo(buttonElement) {
     }
     var t = document.createTextNode(inputPlaceholder);
     DDDivSpan.append(t);
+
+
 
 
     li.append(DDDivSpan);
@@ -154,7 +167,7 @@ function edit(editButton) {
 //
 
 // document.getElementById("myNewItem").value = "";
-//     // if (inputValue === '') {
+//     if (inputValue === '') {
 // if alert("You must write something!");
 // } else {
 //     document.getElementById("myUL").appendChild(li);
